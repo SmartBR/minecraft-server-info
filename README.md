@@ -1,7 +1,7 @@
 # minecraft-server-info
 API to obtain information from a minecraft server.
 
-# How to install
+# How to install (Gradle)
 ```groovy
 repositories {
     mavenCentral()
@@ -14,6 +14,22 @@ repositories {
 dependencies  {
     compile 'com.github.SmartBR:minecraft-server-info:-SNAPSHOT'
 }
+```
+
+# How to install (Maven)
+```maven
+<repositories>
+    <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+    </repository>
+</repositories>
+
+<dependency>
+    <groupId>com.github.SmartBR</groupId>
+    <artifactId>minecraft-server-info</artifactId>
+    <version>-SNAPSHOT</version>
+</dependency>
 ```
 
 # Examples
