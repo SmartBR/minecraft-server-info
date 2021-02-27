@@ -17,6 +17,19 @@ public class MCServerInfo {
     private final Gson GSON = new GsonBuilder().create();
     private final String BASE_URL = "https://api.mcsrvstat.us/2/";
 
+    public static void main(String[] args) {
+        MCServerInfo mcserver = new MCServerInfo();
+
+        mcserver.getServer("mc.hypixel.net").whenComplete((serverResponse, throwable) -> {
+           if (throwable != null) {
+               throwable.printStackTrace();
+               return;
+           }
+
+            System.out.println(serverResponse.toString());
+        });
+    }
+
     private final ExecutorService executorService;
     private final HttpClient httpClient;
 
